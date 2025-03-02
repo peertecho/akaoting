@@ -5,8 +5,9 @@ RefreshRuntime.injectIntoGlobalHook(window)
 window.$RefreshReg$ = RefreshRuntime.register
 window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform
 
+const paths = ['/build/src']
 const debounceRefresh = debounce(RefreshRuntime.performReactRefresh)
-hotmods({ paths: ['/build/src'] }, (reloads) => {
+hotmods({ paths }, (reloads) => {
   if (reloads.length) {
     debounceRefresh()
   }

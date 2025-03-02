@@ -7,9 +7,11 @@
   "scripts": {
     "build": "rm -rf ./build && swc ./src -d ./build --copy-files",
     "build:watch": "npm run build -- --watch --config-file .swcrcdev",
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+    "build:tailwind:watch": "npm run build:tailwind -- --watch",
     "start": "pear run .",
     "dev:start": "RUN_ENV=dev pear run -d .",
-    "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:watch\" \"npm run dev:start\"",
+    "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:tailwind:watch\" \"npm run build:watch\" \"npm run dev:start\"",
     "dev": "npm run dev:watch"
   },
   "dependencies": {
@@ -23,7 +25,8 @@
     "concurrently": "^9.1.2",
     "pear-hotmods": "^1.0.3",
     "pear-interface": "^1.0.3",
-    "react-refresh": "^0.16.0"
+    "react-refresh": "^0.16.0",
+    "tailwindcss": "^4.0.9"
   },
   "pear": {
     "name": "akaoting",
