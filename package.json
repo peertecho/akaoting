@@ -7,13 +7,14 @@
   "scripts": {
     "postinstall": "npx patch-package",
     "clean": "rm -rf build src/output.css",
-    "build": "rm -rf build && swc src -d build --copy-files",
-    "build:watch": "npm run build -- --watch --config-file .swcrcdev",
+    "build:swc": "rm -rf build && swc src -d build --copy-files",
+    "build:swc:watch": "npm run build:swc -- --watch --config-file .swcrcdev",
     "build:tailwind": "npx @tailwindcss/cli -i src/input.css -o src/output.css",
     "build:tailwind:watch": "npm run build:tailwind -- --watch",
+    "build": "npm run build:tailwind && npm run build:swc",
     "start": "pear run .",
     "dev:start": "RUN_ENV=dev pear run -d .",
-    "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:tailwind:watch\" \"npm run build:watch\" \"npm run dev:start\"",
+    "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:tailwind:watch\" \"npm run build:swc:watch\" \"npm run dev:start\"",
     "dev": "npm run dev:watch"
   },
   "dependencies": {
