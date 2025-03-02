@@ -1,23 +1,36 @@
 {
   "name": "akaoting",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "type": "module",
   "main": "index.html",
+  "scripts": {
+    "build": "rm -rf ./build && swc ./src -d ./build --copy-files",
+    "build:watch": "npm run build -- --watch --config-file .swcrcdev",
+    "start": "pear run .",
+    "dev:start": "RUN_ENV=dev pear run -d .",
+    "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:watch\" \"npm run dev:start\"",
+    "dev": "npm run dev:watch"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.11.5",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.1.2",
+    "pear-hotmods": "^1.0.3",
+    "pear-interface": "^1.0.3",
+    "react-refresh": "^0.16.0"
+  },
   "pear": {
     "name": "akaoting",
-    "type": "desktop",
     "gui": {
       "backgroundColor": "#1F2430",
       "height": "540",
       "width": "720"
     }
-  },
-  "type": "module",
-  "license": "Apache-2.0",
-  "scripts": {
-    "dev": "pear run -d .",
-    "test": "brittle test/*.test.js"
-  },
-  "devDependencies": {
-    "brittle": "^3.0.0",
-    "pear-interface": "^1.0.0"
   }
 }

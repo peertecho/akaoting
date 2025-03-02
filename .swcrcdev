@@ -1,0 +1,28 @@
+[
+  {
+    "test": ".*\\.js$",
+    "jsc": {
+      "target": "es2022",
+      "parser": {
+        "syntax": "ecmascript"
+      }
+    }
+  },
+  {
+    "test": ".*\\.jsx$",
+    "jsc": {
+      "target": "es2022",
+      "parser": {
+        "syntax": "ecmascript",
+        "jsx": true
+      },
+      "transform": {
+        "react": {
+          "runtime": "automatic",
+          "development": true,
+          "refresh": true
+        }
+      }
+    }
+  }
+]
