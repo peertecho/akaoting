@@ -1,23 +1,25 @@
 [
   {
-    "test": ".*\\.js$",
-    "jsc": {
-      "target": "es2022",
-      "parser": {
-        "syntax": "ecmascript"
-      }
-    }
-  },
-  {
-    "test": ".*\\.jsx$",
+    "test": ".*\\.ts$",
     "jsc": {
       "baseUrl":"./",
       "paths": {
          "@/*": ["src/*"]
       },
-      "target": "es2022",
       "parser": {
-        "syntax": "ecmascript",
+        "syntax": "typescript"
+      }
+    }
+  },
+  {
+    "test": ".*\\.tsx$",
+    "jsc": {
+      "baseUrl":"./",
+      "paths": {
+         "@/*": ["src/*"]
+      },
+      "parser": {
+        "syntax": "typescript",
         "jsx": true
       },
       "transform": {

@@ -1,0 +1,29 @@
+{
+  // "extends": "@tsconfig/strictest/tsconfig.json",
+  // "extends": "@tsconfig/node22/tsconfig.json",
+  "extends": [
+    "@tsconfig/strictest/tsconfig.json",
+    "@tsconfig/node22/tsconfig.json",
+  ],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+
+    "allowJs": true,
+    "checkJs": false,
+    "noPropertyAccessFromIndexSignature": false, // e.g. allow process.env.RUN_ENV
+  },
+  "include": [
+    "src",
+  ],
+}

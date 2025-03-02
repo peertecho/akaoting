@@ -9,7 +9,6 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -20,6 +19,7 @@ import { Button } from "@/components/ui/button";
 export default function App () {
   return (
     <div className="p-[1rem]">
+      {/* @ts-ignore */}
       <div className="h-[1rem]"><pear-ctrl /></div>
 
       <Breadcrumb>
