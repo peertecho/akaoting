@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 export default function App () {
   return (
     <div className="p-[1rem]">
-      {/* @ts-ignore */}
+      {/* @ts-expect-error no type def yet */}
       <div className="h-[1rem]"><pear-ctrl /></div>
 
       <Breadcrumb>
