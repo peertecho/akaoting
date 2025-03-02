@@ -11,6 +11,10 @@
   {
     "test": ".*\\.jsx$",
     "jsc": {
+      "baseUrl":"./",
+      "paths": {
+         "@/*": ["src/*"]
+      },
       "target": "es2022",
       "parser": {
         "syntax": "ecmascript",
