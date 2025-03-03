@@ -1,9 +1,8 @@
-/** @typedef {import('pear-interface')} */
-
 import Hyperswarm from 'hyperswarm'
 import crypto from 'hypercore-crypto'
 import b4a from 'b4a'
 
+/* global Pear */
 const { updates, reload, teardown } = Pear
 
 updates(() => reload())
