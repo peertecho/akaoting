@@ -11,7 +11,7 @@ window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform
 const paths = ['/build/src']
 const debounceRefresh = debounce(RefreshRuntime.performReactRefresh)
 hotmods({ paths }, (reloads: unknown[]) => {
-  if (reloads.length) {
+  if (reloads.length > 0) {
     debounceRefresh()
   }
 })

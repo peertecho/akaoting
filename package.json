@@ -16,8 +16,8 @@
     "dev:start": "RUN_ENV=dev pear run -d .",
     "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:tailwind:watch\" \"npm run build:swc:watch\" \"npm run dev:start\"",
     "dev": "npm run dev:watch",
-    "lint": "standard",
-    "lint:fix": "standard --fix",
+    "lint": "standard && ts-standard",
+    "lint:fix": "standard --fix && ts-standard --fix",
     "test": ""
   },
   "dependencies": {
@@ -51,6 +51,7 @@
     "standard": "^17.1.2",
     "tailwindcss": "^4.0.9",
     "tailwindcss-animate": "^1.0.7",
+    "ts-standard": "^12.0.2",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.25.0"
   },

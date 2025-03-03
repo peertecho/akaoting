@@ -1,25 +1,25 @@
-import { 
-  Breadcrumb, 
+import {
+  Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator, 
-} from "@/components/ui/breadcrumb";
+  BreadcrumbSeparator
+} from '@/components/ui/breadcrumb'
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import { Button } from "@/components/ui/button";
-import Topic from "@/components/topic";
+  TableRow
+} from '@/components/ui/table'
+import { Button } from '@/components/ui/button'
+import Topic from '@/components/topic'
 
 export default function App () {
   return (
-    <div className="px-[1rem] py-[3rem]">
+    <div className='px-[1rem] py-[3rem]'>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -50,15 +50,15 @@ export default function App () {
             <TableCell>123456</TableCell>
             <TableCell>
               <Button>Open</Button>
-              <Button variant="destructive">Delete</Button>
+              <Button variant='destructive'>Delete</Button>
             </TableCell>
-            </TableRow>
+          </TableRow>
         </TableBody>
       </Table>
 
       <Button>Add</Button>
 
-      <hr className="mt-[1rem]" />
+      <hr className='mt-[1rem]' />
 
       <Topic />
     </div>
