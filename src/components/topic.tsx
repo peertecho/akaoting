@@ -1,15 +1,17 @@
 import { useState } from "react"
+import Hyperswarm from "hyperswarm"
 
-import { createSwarm, createTopic, joinTopic, sendMessage } from "../lib/swarm"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
+
+import { createSwarm, createTopic, joinTopic, sendMessage } from "../lib/swarm"
 
 export default function Topic () {
   const [error, setError] = useState('')
   
   const [inputName, setInputName] = useState('')
-  const [swarm, setSwarm] = useState()
+  const [swarm, setSwarm] = useState<Hyperswarm>()
   const [size, setSize] = useState(0)
 
   const [newTopic, setNewTopic] = useState('')

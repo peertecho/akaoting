@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "postinstall": "npx patch-package",
+    "postinstall": "npx patch-package && ./scripts/tsc.sh",
     "clean": "rm -rf build src/output.css",
     "build:swc": "rm -rf build && swc src -d build --copy-files",
     "build:swc:watch": "npm run build:swc -- --watch --config-file .swcrcdev",
@@ -16,8 +16,9 @@
     "dev:start": "RUN_ENV=dev pear run -d .",
     "dev:watch": "concurrently --kill-others --kill-others-on-fail \"npm run build:tailwind:watch\" \"npm run build:swc:watch\" \"npm run dev:start\"",
     "dev": "npm run dev:watch",
-    "lint": "eslint src",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": ""
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -41,12 +42,13 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@types/react-refresh": "^0.14.6",
+    "brittle": "^3.11.0",
     "chokidar": "^4.0.3",
     "concurrently": "^9.1.2",
-    "eslint": "^9.21.0",
     "pear-hotmods": "^1.0.3",
     "pear-interface": "^1.0.3",
     "react-refresh": "^0.16.0",
+    "standard": "^17.1.2",
     "tailwindcss": "^4.0.9",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "~5.7.3",
