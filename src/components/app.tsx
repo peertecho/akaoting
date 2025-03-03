@@ -15,13 +15,11 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button";
+import Topic from "@/components/topic";
 
 export default function App () {
   return (
     <div className="p-[1rem]">
-      {/* @ts-expect-error no type def yet */}
-      <div className="h-[1rem]"><pear-ctrl /></div>
-
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -59,6 +57,10 @@ export default function App () {
       </Table>
 
       <Button>Add</Button>
+
+      <hr className="mt-[1rem]" />
+
+      <Topic />
     </div>
   )
 }

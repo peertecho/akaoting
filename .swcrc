@@ -28,5 +28,13 @@
         }
       }
     }
+  },
+  {
+    "test": ".*\\.js$",
+    "jsc": {
+      "parser": {
+        "syntax": "ecmascript",
+      }
+    }
   }
 ]

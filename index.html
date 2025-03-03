@@ -6,9 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akaoting</title>
   <link href="./build/src/output.css" rel="stylesheet">
+  <style>
+    #bar {
+      -webkit-app-region: drag;
+      height: 30px;
+      width: 100%;
+      background: gray;
+    }
+    pear-ctrl[data-platform=darwin] {
+      padding: 12px;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="bar"><pear-ctrl></pear-ctrl></div>
   <div id="app"></div>
   <script type="module" src="./build/src/index.js" defer></script>
 </body>
