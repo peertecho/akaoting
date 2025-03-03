@@ -2,8 +2,8 @@ import Hyperswarm from 'hyperswarm'
 import crypto from 'hypercore-crypto'
 import b4a from 'b4a'
 
-/* global Pear */
-const { updates, reload, teardown } = Pear
+/** @type {import('pear-interface').Pear} */
+const { updates, reload, teardown } = global.Pear
 
 updates(() => reload())
 
