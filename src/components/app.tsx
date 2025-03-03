@@ -19,7 +19,7 @@ import Topic from "@/components/topic";
 
 export default function App () {
   return (
-    <div className="p-[1rem]">
+    <div className="px-[1rem] py-[3rem]">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
