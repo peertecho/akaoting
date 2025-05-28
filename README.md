@@ -25,3 +25,4 @@ See more: https://ui.shadcn.com/docs/components/button
 - run `npx patch-package @radix-ui/react-slot`
 - add `npx patch-package` as a postinstall script in `package.json`
 123
+123
