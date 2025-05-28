@@ -24,3 +24,4 @@ See more: https://ui.shadcn.com/docs/components/button
 - replace `import * as React from "react"` with `import React from "react"`
 - run `npx patch-package @radix-ui/react-slot`
 - add `npx patch-package` as a postinstall script in `package.json`
+123
